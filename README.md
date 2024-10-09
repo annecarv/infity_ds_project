@@ -11,6 +11,10 @@ pandas
 matplotlib 
 numpy 
 
+Objetivo Principal:
+
+O objetivo principal é gerar insights e visualizar as tendências desses dados de maneira eficiente. Traçando um perfil do cliente e suas tendencias na hora da compra.
+
 1. Distribuição dos Clientes
 O código agrupa os dados por estado civil, cidade e gênero, fornecendo insights sobre a distribuição de clientes e suas compras. Gráficos de barras são utilizados para destacar as porcentagens de compras por essas categorias.
 
@@ -22,9 +26,6 @@ Outliers no valor das compras são identificados usando a técnica do intervalo 
 
 4. Análise por Faixa Etária
 A mediana de compras é calculada e visualizada por faixa etária, mostrando como o valor de compra tende a variar com a idade.
-
-Conclusão
-Este código realiza uma análise detalhada do comportamento de compras de clientes com base em atributos demográficos e categorias de produtos. Com o uso de pandas para manipulação de dados e matplotlib para visualização, os insights são apresentados de forma clara e visualmente atraente. Técnicas como detecção de outliers garantem que a análise seja precisa, e o uso de gráficos permite uma melhor compreensão das tendências gerais no comportamento de compra dos clientes.
 
 Pontos Fortes:
 O uso extensivo de agregações permite insights ricos a partir dos dados.
@@ -42,6 +43,22 @@ Stay_In_Current_City_Years: Quantos anos o usuário está na cidade atual (repre
 Marital_Status: Estado civil (0 para solteiro, 1 para casado).
 Product_Category: Categoria do produto.
 Purchase: Valor da compra.
+
+
+Variáveis Numéricas (Quantitativas):
+
+Occupation:  Inteiro - Ordinal (representa categorias ou grupos de ocupação, mas é tratado como numérico) 
+Marital_Status: Inteiro  - Ordinal  (também representa categorias, mas é numérico) 
+Product_Category: Inteiro  - Ordinal (representa categorias de produtos)
+Purchase: Inteiro - Cardinal (representa o valor da compra)
+
+Variáveis Categóricas (Qualitativas):
+
+Product_ID: Categórica - Ordinal (identificadores de produtos)
+Gender: Categórica - Ordinal (representa duas categorias: 'Male' e 'Female')
+Age: Categórica - Ordinal (faixas etárias)
+City_Category: Categórica - Ordinal  (representa categorias de cidade)
+Stay_In_Current_City_Years: - Ordinal Categórica (representa a duração da estadia em anos como categoria)
 
 1. Preparação dos Dados
 Tratar dados categóricos: Colunas como Gender, Age, City_Category, e Stay_In_Current_City_Years precisam ser transformadas em um formato que o modelo consiga entender (normalmente numérico).
@@ -70,4 +87,15 @@ Os dados foram codificados com variáveis dummies para colunas categóricas, e n
 
 Agora, podemos separar as variáveis independentes (features) e a variável dependente (target, que será a coluna Purchase). Em seguida, dividiremos o conjunto de dados em treino e teste, e treinaremos um modelo de regressão, como o Random Forest Regressor.
 
-Vou preparar os dados e treinar o modelo. ​
+
+Conclusão
+Este código realiza uma análise detalhada do comportamento de compras de clientes com base em atributos demográficos e categorias de produtos. Com o uso de pandas para manipulação de dados e matplotlib para visualização, os insights são apresentados de forma clara e visualmente atraente. Técnicas como detecção de outliers garantem que a análise seja precisa, e o uso de gráficos permite uma melhor compreensão das tendências gerais no comportamento de compra dos clientes.
+
+
+Passo 3: Avaliação dos Modelos
+Classificação: A acurácia é a métrica principal para a previsão da categoria do produto. Se a acurácia for baixa, você pode ajustar hiperparâmetros ou usar outro modelo como SVM, XGBoost, etc.
+Regressão: O erro quadrático médio (MSE) mede a precisão da previsão do valor de compra. Se o MSE for alto, o modelo pode precisar de mais otimizações ou seleção de features.
+Próximos Passos
+Aprimorar o modelo: Ajuste hiperparâmetros dos modelos usando GridSearchCV ou RandomizedSearchCV.
+Feature Engineering: Criar novas features a partir dos dados existentes pode melhorar a performance do modelo.
+Posso te ajudar a otimizar os modelos ou realizar visualizações dos resultados se preferir!
