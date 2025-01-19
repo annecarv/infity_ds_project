@@ -1,6 +1,6 @@
 # Análise de Dados - Walmart
 
-Código desenvolvido para realizar a análise de um conjunto de dados de compras do Walmart, focando no comportamento de compra dos clientes com base em diferentes atributos, como gênero, categoria de produto, cidade, estado civil e faixa etária. 
+Objetivo: Realizar a análise de um conjunto de dados de compras do Walmart, focando no comportamento de compra dos clientes com base em diferentes atributos, como gênero, categoria de produto, cidade, estado civil e faixa etária. 
 
 ####  Objetivo
 
